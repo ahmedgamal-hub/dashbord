@@ -1,0 +1,53 @@
+<div class="sales">
+    <div class="sales_contanier">
+        <div class="chart_spider">
+            <h2 class="sales_title">Hourly Sales</h2>
+            <div class="card flex justify-content-center">
+                <p-chart type="radar" [data]="data" [options]="options"></p-chart>
+            </div>
+        </div>
+       
+        <div class="chart_spider">
+            <h2 class="sales_title">Sales by Station</h2>
+            <div class="station_container">
+                <div class="station">
+                    <div>
+                        <img src="../../assets/images/navbar/gas-station-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="station_name">Station Name</p>
+                    <p class="station_count">62,721 m³</p>
+                </div>
+                <div class="card">
+                    <p-progressBar [value]="50"></p-progressBar>
+                </div>
+            </div>
+            <div class="station_container">
+                <div class="station">
+                    <div>
+                        <img src="../../assets/images/navbar/gas-station-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="station_name">Station Name</p>
+                    <p class="station_count">62,721 m³</p>
+                </div>
+                <div class="card">
+                    <p-progressBar [value]="50"></p-progressBar>
+                </div>
+            </div>
+            <div class="station_container">
+                <div class="station">
+                    <div>
+                        <img src="../../assets/images/navbar/gas-station-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="station_name">Station Name</p>
+                    <p class="station_count station_count_nm">NM</p>
+                </div>
+                <div class="card nm_card">
+                    <p-progressBar [value]="0"></p-progressBar>
+                </div>
+            </div>
+           
+        </div>
+       
+    </div>
+
+</div>

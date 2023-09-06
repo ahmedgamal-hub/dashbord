@@ -1,0 +1,189 @@
+@import '../../assets/styling/variables/colors';
+.nav{
+    background: #ffffff;
+    padding: 16px;
+    .nav_container{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap !important;
+        .stations_container{
+            width: 28%;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            .Monitored_stations{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                &::before{
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    position: absolute;
+                    bottom: 10%;
+                    left: 0%;
+                    background-color: $color_orange;
+                }
+                .ico{
+                    margin-inline-start: 16px;
+                    margin-inline-end: 16px;
+        
+                }
+                .count{
+                    font-size: 32px;
+                    color:$main_text;
+                    margin-inline-end: 16px;
+                }
+                .stations_title{
+                    font-size: 20px;
+                    color:$main_text;
+                }
+            }
+            .Last_update{
+                margin-inline-start: 23px;
+                .ico{
+                    transform: rotate(120deg);
+    
+                    color:$main_text;
+                }
+            }
+        }
+        .hest_container{
+            border-radius: 30px;
+            background: #F9F5F3;
+            width: 28%;
+            .sub_nav{
+                .sub_nav_container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    p{
+                        text-transform: uppercase;
+                        margin-inline-end: 16px;
+                        padding: 8px 16px ;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $color_orange;
+                            color: #ffffff;
+                        }
+                    }
+                    .end_btn{
+                        margin-inline-end: 0px;
+                    }
+                    .active{
+                        background-color: $color_orange;
+                            color: #ffffff;
+                    }
+                }
+            }
+          
+        }
+        .date_container{
+            width: 28%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .date{
+                margin-inline-end: 23px;
+                padding: 1rem;
+                border-bottom:2px solid #000 ;
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: space-between;
+                &::before{
+                    content: '';
+                    left: -10%;
+                    position: absolute;
+                    width: 0; 
+                    height: 0; 
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    
+                    border-left: 10px solid $color_orange;
+
+                }
+                .ico{
+                    margin-inline-start: 2rem;
+                }
+            }
+            .end_date{
+                margin-inline-end: 23px;
+                padding: 1rem;
+                border-bottom:2px solid #000 ;
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: space-between;
+                &::before{
+                    content: '';
+                    left: -10%;
+                    position: absolute;
+                    width: 10px; 
+                    height: 10px; 
+                    background-color: $color_orange;
+      
+                }
+                .ico{
+                    margin-inline-start: 2rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .nav_container{
+        flex-wrap: wrap !important;
+    }
+    .stations_container{
+
+        width: 50% !important;
+    }
+    .hest_container{
+        width: 50% !important;
+    }
+    .date_container{
+      width: 50% !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .nav_container{
+        flex-wrap: wrap !important;
+    }
+    .stations_container{
+        width: 100% !important;
+    }
+    .hest_container{
+        margin: 3rem 0rem;
+        width: 100% !important;
+    }
+    .date_container{
+      width: 100% !important;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .nav_container{
+        flex-wrap: wrap !important;
+    }
+    .stations_container{
+        width: 100% !important;
+        flex-direction: column;
+    }
+    .hest_container{
+        margin: 3rem 0rem;
+        width: 100% !important;
+
+        flex-direction: column;
+    }
+    .date_container{
+      width: 100% !important;
+
+      flex-direction: column;
+    }
+}

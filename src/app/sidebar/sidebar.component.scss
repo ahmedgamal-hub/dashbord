@@ -1,0 +1,43 @@
+@import '../../assets/styling/variables/colors';
+*{
+    margin: 0;
+    padding: 0;
+}
+.side_bar{
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: $color_orange;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    .side_container{
+        height: 100%;
+        padding: 1rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        .side_open{
+            height: 10%;
+        }
+        .side_pages{
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            button{
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+    }
+    button{
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+}

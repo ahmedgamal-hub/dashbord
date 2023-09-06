@@ -1,0 +1,97 @@
+
+@import '../../assets/styling/variables/colors';
+*{
+    margin: 0;
+    padding: 0;
+}
+.sec_tabs{
+    width: 100%;
+    margin: auto;
+    
+    margin-top: 5rem;
+    // .card{
+    //     height: 50vh;
+    //     overflow: auto;
+    // }
+}
+::ng-deep{
+    .sec_tabs{
+        ::-webkit-scrollbar {
+            margin-block-start: 1rem;
+            width: 10px;
+          }
+          ::-webkit-scrollbar {
+            position: relative;
+            height: 100% !important;
+            border-radius: 0.25rem;
+            background: linear-gradient(
+              134deg,
+              rgba(99, 99, 99, 0.4) 0%,
+              rgba(0, 0, 0, 0.05) 100%
+            );
+            border: 1px solid rgba(255, 255, 255, 0.5);
+          }
+          
+          ::-webkit-scrollbar-button {
+            border-radius: 0.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: linear-gradient(
+              134deg,
+              rgba(99, 99, 99, 0.4) 0%,
+              rgba(0, 0, 0, 0.05) 100%
+            );
+            backdrop-filter: blur(17.07201385498047px);
+          }
+          /* Down */
+          ::-webkit-scrollbar-button:vertical:increment {
+           background-image: url("../..//assets/images/navbar/arrow_down.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+          ::-webkit-scrollbar-button:vertical:decrement {
+            background-image: url("../../assets/images/navbar/arrow_up.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            filter: hue-rotate(90deg); /* 90deg rotation */
+          }
+          ::-webkit-scrollbar-thumb {
+            border-radius: 2.125rem !important;
+            border: 1.494px solid rgba(255, 255, 255, 0.5);
+            background: #ff7f5cc0 !important;
+            width: 1rem !important;
+            height: 6.4375rem !important;
+            backdrop-filter: blur(22.40701675415039px);
+            opacity: 1;
+            transition: background-color 0.2s;
+          }
+          ::-webkit-scrollbar-button:vertical:decrement:hover,
+          ::-webkit-scrollbar-button:vertical:increment:hover {
+            cursor: pointer ;
+          }
+    }
+    .p-tabview-nav {
+        justify-content: end !important;
+    }
+    .p-tabview-nav-container {
+        width: fit-content;
+        margin-left: auto;
+    }
+    .p-tabview-nav-content {
+        border-radius: 25px !important;
+
+    }
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        border:none !important ;
+        background-color: $color_orange;
+        color: #fff;
+        border-radius: 25px;
+    }
+    .p-tabview-title {
+        margin: 0rem 1rem;
+    }
+    .p-tabview .p-tabview-panels {
+        margin-top: 5rem;
+    }
+
+}

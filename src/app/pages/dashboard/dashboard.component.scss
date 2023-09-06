@@ -1,0 +1,30 @@
+.content_container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  
+    .content{
+        width: 85%;
+    }
+    .rigt_content{
+        width: 14%;
+        
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .content_container{
+        flex-direction: column-reverse;
+    }
+    .content{
+        width: 90% !important;
+        margin-left: auto !important;
+    }
+    .rigt_content{
+        width: 90% !important;
+        margin-left: auto !important;
+        height: 100% !important;
+        
+    }
+}

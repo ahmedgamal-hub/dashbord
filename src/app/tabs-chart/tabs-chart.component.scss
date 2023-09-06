@@ -1,0 +1,23 @@
+@import '../../assets/styling/variables/colors';
+.tab_chart{
+    ::ng-deep{
+        .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+            background: none !important;
+            color: $color_orange;
+            border-radius: 0px !important;
+            
+        }
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+            box-shadow: none !important;
+            border: none !important;
+        }
+        .p-accordion .p-accordion-header .p-accordion-header-link {
+            box-shadow: none !important;
+            border: none !important;
+            transition: background-color 0s, border-color 0s, box-shadow 0s;
+          }
+          .p-tabview .p-tabview-nav .p-tabview-ink-bar {
+            background: $color_orange;
+          }
+    }
+}

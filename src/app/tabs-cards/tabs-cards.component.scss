@@ -1,0 +1,231 @@
+@import '../../assets/styling/variables/colors';
+.tabs_cards{
+    background: #F9F5F3;
+    height: 50vh;
+    overflow: auto;
+    .card{
+        background: #fff;
+        width: 100%;
+        position: relative;
+        padding: 2rem;
+        margin-bottom: 2rem !important;
+        overflow: hidden;
+       
+        .check_box{
+            position: absolute;
+            top: 15px;
+            right: 50px;
+            width: 50%;
+            min-height: 10rem;
+
+            padding:1rem;
+            background-color: #fff;
+            .check_box_header{
+                width: 90%;
+                margin: auto;
+                border-bottom: 1px solid #0000003b;
+                .title{
+                    font-size: 11px;
+                    margin-bottom: .5rem;
+                }
+
+            }
+        }
+        .header_card{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom:2px solid #0000003b ;
+       
+            .Monitored_stations{
+                width: 22%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                &::before{
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    position: absolute;
+                    bottom: 10%;
+                    left: 0%;
+                    background-color: $color_orange;
+                }
+                .ico{
+                    margin-inline-start: 16px;
+                    margin-inline-end: 16px;
+            
+                }
+              
+                .stations_title{
+                    font-size: 22px;
+                    color:$main_text;
+                }
+            }
+            .menu{
+                position: relative;
+                button{
+                    position: relative;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .contant_card{
+           .row{
+            td{
+                padding-top: 2rem;
+            }
+            margin-bottom: 2rem ;
+           }
+            .ask{
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+    .check_box_container{
+        width: 90%;
+        margin: auto;
+     
+        .check_box_check{
+            display: inline-block;
+            width: 45% !important;
+            margin-top: .5rem;
+        }
+    }
+   .not_active{
+    .Monitored_stations{
+        &::before{
+            background-color: #B9CDE2 !important;
+        }
+    }
+   }
+}
+::ng-deep{
+    .p-tabview .p-tabview-panels {
+        padding: 0 !important;
+    }
+    .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+        border-color: $color_orange !important;
+        background: $color_orange !important;
+        
+      }
+      .p-checkbox .p-checkbox-box.p-highlight {
+        border-color: $color_orange !important;
+        background: $color_orange !important;
+      }
+      .p-checkbox .p-checkbox-box.p-highlight {
+        border-color: $color_orange !important;
+        background: $color_orange !important;
+      }
+      .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+        border-color: $color_orange !important;
+      }
+      .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+        border-color: $color_orange !important;
+      }
+      .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+        border-color: $color_orange !important;
+        background: $color_orange !important;
+      }
+      .p-input-filled .p-checkbox .p-checkbox-box.p-highlight {
+        background: $color_orange !important;
+      }
+      .p-input-filled .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+        background: $color_orange !important;
+      }
+      .p-chips .p-chips-multiple-container:not(.p-disabled):hover {
+        border-color: $color_orange !important;
+      }
+      .p-chips .p-chips-multiple-container:not(.p-disabled).p-focus {
+        border-color: $color_orange !important;
+      }
+      .p-chips .p-chips-multiple-container .p-chips-token {
+        color: $color_orange !important;
+      }
+}
+::ng-deep{
+    .tabs_cards{
+        ::-webkit-scrollbar {
+            margin-block-start: 1rem;
+            width: 10px;
+          }
+          ::-webkit-scrollbar {
+            position: relative;
+            height: 100% !important;
+            border-radius: 0.25rem;
+            background: linear-gradient(
+              134deg,
+              rgba(99, 99, 99, 0.4) 0%,
+              rgba(0, 0, 0, 0.05) 100%
+            );
+            border: 1px solid rgba(255, 255, 255, 0.5);
+          }
+          
+          ::-webkit-scrollbar-button {
+            border-radius: 0.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: linear-gradient(
+              134deg,
+              rgba(99, 99, 99, 0.4) 0%,
+              rgba(0, 0, 0, 0.05) 100%
+            );
+            backdrop-filter: blur(17.07201385498047px);
+          }
+          /* Down */
+          ::-webkit-scrollbar-button:vertical:increment {
+           background-image: url("../..//assets/images/navbar/arrow_down.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+          ::-webkit-scrollbar-button:vertical:decrement {
+            background-image: url("../../assets/images/navbar/arrow_up.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            filter: hue-rotate(90deg); /* 90deg rotation */
+          }
+          ::-webkit-scrollbar-thumb {
+            border-radius: 2.125rem !important;
+            border: 1.494px solid rgba(255, 255, 255, 0.5);
+            background: #ff7f5cc0 !important;
+            width: 1rem !important;
+            height: 6.4375rem !important;
+            backdrop-filter: blur(22.40701675415039px);
+            opacity: 1;
+            transition: background-color 0.2s;
+          }
+          ::-webkit-scrollbar-button:vertical:decrement:hover,
+          ::-webkit-scrollbar-button:vertical:increment:hover {
+            cursor: pointer ;
+          }
+    }
+    .p-tabview-nav {
+        justify-content: end !important;
+    }
+    .p-tabview-nav-container {
+        width: fit-content;
+        margin-left: auto;
+    }
+    .p-tabview-nav-content {
+        border-radius: 25px !important;
+
+    }
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        border:none !important ;
+        background-color: $color_orange;
+        color: #fff;
+        border-radius: 25px;
+    }
+    .p-tabview-title {
+        margin: 0rem 1rem;
+    }
+    .p-tabview .p-tabview-panels {
+        margin-top: 5rem;
+    }
+
+}

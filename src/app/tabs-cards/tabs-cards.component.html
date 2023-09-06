@@ -1,0 +1,231 @@
+<div class="tabs_cards">
+    <div *ngFor="let data of data">
+        <div class="card" [ngClass]="{'not_active':!data.stat}">
+            <div class="check_box" *ngIf="data.check" >
+                <div class="check_box_header">
+                    <p class="title">View Properties:</p>
+                </div>
+                <div class="check_box_container">
+                    <div class="card ">
+                        <!-- <p-checkbox name="groupname" value="val1" label="Value 1" class="check_box_check" checked ></p-checkbox>
+                        <p-checkbox name="groupname" value="val2" label="Value 2" class="check_box_check" ></p-checkbox>
+                        <p-checkbox name="groupname" value="val3" label="Value 3" class="check_box_check" ></p-checkbox>
+                        <p-checkbox name="groupname" value="val4" label="Value 4" class="check_box_check" ></p-checkbox>
+                        <p-checkbox name="groupname" value="val5" label="Value 5" class="check_box_check" ></p-checkbox>
+                        <p-checkbox name="groupname" value="val6" label="Value 6" class="check_box_check" ></p-checkbox> -->
+                        <span *ngFor="let category of categories" class="check_box_check  ">
+                            <p-checkbox name="group2" value="category" label="Value 1" [value]="category"  [(ngModel)]="selectedCategories" [inputId]="category.key" [disabled]="category.key === 'R'"></p-checkbox>
+                           
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="header_card">
+                
+                <div class="Monitored_stations">
+                    <div class="ico">
+                        <img src="../.../../../assets/images/navbar/gas-station-svgrepo-com3.svg" alt=""  *ngIf="!data.stat">
+                        <img src="../.../../../assets/images/navbar/gas-station-svgrepo-comcolor.svg" alt="" *ngIf="data.stat">
+                    </div>
+                        <div class="stations_title">STATION NAME 
+                            <br>
+                            DUMMY</div>
+                    
+                </div>
+                <div class="menu">
+                   <button (click)="togelChek(data.id)">
+                    <i class="fa-solid fa-ellipsis fa-xl"></i>
+                    
+                   </button>
+                </div>
+            </div>
+            <div class="contant_card">
+                <table style="width:100%">
+                    <tr class="row">
+                      <td class="ask">Total Sales</td>
+                      <td>62,721</td>
+                      <td class="ask">Compression State</td>
+                      <td>Compression</td>
+                      <td class="ask">Max Transaction / hour</td>
+                      <td>20</td>
+                    </tr>
+                    <tr class="row">
+                      <td class="ask">Total Value</td>
+                      <td>550 EGP</td>
+                      <td class="ask">Total Transaction Count</td>
+                      <td>5161</td>
+                      <td class="ask">Max Transaction Date-Time</td>
+                      <td>8-1-2021 | 10:16 PM</td>
+                    </tr>
+                  </table>
+    
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="card">
+        <div class="check_box" *ngIf="check" >
+            <div class="check_box_header">
+                <p class="title">View Properties:</p>
+            </div>
+            <div class="check_box_container">
+                <div class="card flex justify-content-center gap-3">
+                    <p-checkbox name="groupname" value="val1" label="Value 1" class="check_box_check "  ></p-checkbox>
+                    <p-checkbox name="groupname" value="val2" label="Value 2" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val3" label="Value 3" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val4" label="Value 4" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val5" label="Value 5" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val6" label="Value 6" class="check_box_check" ></p-checkbox>
+                 </div>
+            </div>
+        </div>
+        <div class="header_card">
+            
+            <div class="Monitored_stations">
+                <div class="ico">
+                    <img src="../.../../../assets/images/navbar/gas-station-svgrepo-comcolor.svg" alt="">
+                </div>
+                    <div class="stations_title">STATION NAME 
+                        <br>
+                        DUMMY</div>
+                
+            </div>
+            <div class="menu">
+               <button (click)="togelChek()">
+                <i class="fa-solid fa-ellipsis fa-xl"></i>
+               </button>
+            </div>
+        </div>
+        <div class="contant_card">
+            <table style="width:100%">
+                <tr class="row">
+                  <td class="ask">Total Sales</td>
+                  <td>62,721</td>
+                  <td class="ask">Compression State</td>
+                  <td>Compression</td>
+                  <td class="ask">Max Transaction / hour</td>
+                  <td>20</td>
+                </tr>
+                <tr class="row">
+                  <td class="ask">Total Value</td>
+                  <td>550 EGP</td>
+                  <td class="ask">Total Transaction Count</td>
+                  <td>5161</td>
+                  <td class="ask">Max Transaction Date-Time</td>
+                  <td>8-1-2021 | 10:16 PM</td>
+                </tr>
+              </table>
+
+        </div>
+    </div>
+    <div class="card not_active">
+        <div class="check_box" *ngIf="check" >
+            <div class="check_box_header">
+                <p class="title">View Properties:</p>
+            </div>
+            <div class="check_box_container">
+                <div class="card flex justify-content-center gap-3">
+                    <p-checkbox name="groupname" value="val1" label="Value 1" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val2" label="Value 2" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val3" label="Value 3" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val4" label="Value 4" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val5" label="Value 5" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val6" label="Value 6" class="check_box_check" ></p-checkbox>
+                 </div>
+            </div>
+        </div>
+        <div class="header_card">
+            
+            <div class="Monitored_stations">
+                <div class="ico">
+                    <img src="../.../../../assets/images/navbar/gas-station-svgrepo-com3.svg" alt="">
+                </div>
+                    <div class="stations_title">STATION NAME 
+                        <br>
+                        DUMMY</div>
+                
+            </div>
+            <div class="menu">
+               <button (click)="togelChek()">
+                <i class="fa-solid fa-ellipsis fa-xl"></i>
+               </button>
+            </div>
+        </div>
+        <div class="contant_card">
+            <table style="width:100%">
+                <tr class="row">
+                  <td class="ask">Total Sales</td>
+                  <td>62,721</td>
+                  <td class="ask">Compression State</td>
+                  <td>Compression</td>
+                  <td class="ask">Max Transaction / hour</td>
+                  <td>20</td>
+                </tr>
+                <tr class="row">
+                  <td class="ask">Total Value</td>
+                  <td>550 EGP</td>
+                  <td class="ask">Total Transaction Count</td>
+                  <td>5161</td>
+                  <td class="ask">Max Transaction Date-Time</td>
+                  <td>8-1-2021 | 10:16 PM</td>
+                </tr>
+              </table>
+
+        </div>
+    </div>
+    <div class="card not_active">
+        <div class="check_box" *ngIf="check" >
+            <div class="check_box_header">
+                <p class="title">View Properties:</p>
+            </div>
+            <div class="check_box_container">
+                <div class="card flex justify-content-center gap-3">
+                    <p-checkbox name="groupname" value="val1" label="Value 1" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val2" label="Value 2" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val3" label="Value 3" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val4" label="Value 4" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val5" label="Value 5" class="check_box_check" ></p-checkbox>
+                    <p-checkbox name="groupname" value="val6" label="Value 6" class="check_box_check" ></p-checkbox>
+                 </div>
+            </div>
+        </div>
+        <div class="header_card">
+            
+            <div class="Monitored_stations">
+                <div class="ico">
+                    <img src="../.../../../assets/images/navbar/gas-station-svgrepo-com3.svg" alt="">
+                </div>
+                    <div class="stations_title">STATION NAME 
+                        <br>
+                        DUMMY</div>
+                
+            </div>
+            <div class="menu">
+               <button (click)="togelChek()">
+                <i class="fa-solid fa-ellipsis fa-xl"></i>
+               </button>
+            </div>
+        </div>
+        <div class="contant_card">
+            <table style="width:100%">
+                <tr class="row">
+                  <td class="ask">Total Sales</td>
+                  <td>62,721</td>
+                  <td class="ask">Compression State</td>
+                  <td>Compression</td>
+                  <td class="ask">Max Transaction / hour</td>
+                  <td>20</td>
+                </tr>
+                <tr class="row">
+                  <td class="ask">Total Value</td>
+                  <td>550 EGP</td>
+                  <td class="ask">Total Transaction Count</td>
+                  <td>5161</td>
+                  <td class="ask">Max Transaction Date-Time</td>
+                  <td>8-1-2021 | 10:16 PM</td>
+                </tr>
+              </table>
+
+        </div>
+    </div> -->
+</div>
